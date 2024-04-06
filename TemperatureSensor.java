@@ -96,13 +96,6 @@ class TemperatureSensor implements Runnable
             {
                 temperatureReadings.add(new TemperatureReading(temperature));
             }
-            try
-            {
-                Thread.sleep(60000);
-            } catch (Exception e)
-            {
-                System.out.println("Unexpected error has occurred.");
-            }
         }
         latch.countDown();
     }
